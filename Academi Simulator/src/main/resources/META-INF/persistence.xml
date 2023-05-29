@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="course_pu" transaction-type="RESOURCE_LOCAL">
+    <class>com.project.model.Course</class>
+    <class>com.project.model.Student</class>
+    <class>com.project.model.Enrollment</class>
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:./db/course"></property>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"></property>
+            <property name="eclipselink.ddl-generation" value="create-tables"></property>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"></property>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"></property>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
